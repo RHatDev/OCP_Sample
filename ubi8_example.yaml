@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubi8-example
+spec:
+  containers:
+  - name: ubi8-example
+    image: registry.access.redhat.com/ubi8:latest
+    command: [ "/bin/sh", "-c", "while true ; do date; sleep 300; done;" ]
+  restartPolicy: Never
