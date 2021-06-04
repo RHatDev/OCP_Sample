@@ -27,3 +27,17 @@ Now, Link pull secret for pulling images
 ```
 oc secrets link default <pull_secret_name> --for=pull
 ```
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-image
+spec:
+  containers:
+  - name: container-name
+    image: image:tag
+  imagePullSecrets:
+  - name: generic
+  
+```
